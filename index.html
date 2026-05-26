@@ -645,6 +645,7 @@
     </div>
     <div class="page-nav-links">
       <a href="#setup"><span class="nav-line"></span>Setup</a>
+      <a href="#prompts"><span class="nav-line"></span>Prompts</a>
       <a href="#structure"><span class="nav-line"></span>5-beat structure</a>
       <a href="#snippets"><span class="nav-line"></span>Motion snippets</a>
       <a href="#identity"><span class="nav-line"></span>Colors &amp; type</a>
@@ -743,6 +744,62 @@
           <h4>Preview in the browser</h4>
           <p>Hot-reload preview. Scrub the timeline, check pacing, validate transitions.</p>
           <div class="code-block light"><span class="code-keyword">npx</span> hyperframes preview</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prompts -->
+  <section id="prompts">
+    <div class="section-title">Prompts</div>
+    <div class="section-heading">Kick off a video in one paste</div>
+    <p class="section-sub">
+      Paste any of these into Claude Code from a HyperFrames scaffold. Each prompt is calibrated to the brand &mdash; light theme, teal accents, 18&ndash;22s length, the 5-beat structure, and the right motion vocabulary for the use case. Swap the bolded values for your specifics.
+    </p>
+
+    <div class="music-steps">
+      <div class="music-step">
+        <div class="step-number">1</div>
+        <div class="music-step-body">
+          <h4>Product launch teaser</h4>
+          <p>A status-verb-led announcement. Hook on the headline, settle into the product glimpse, end on the wordmark + period.</p>
+          <div class="music-prompt">Build a 20-second Marinade video announcing <b>[product name]</b>. Use the 5-beat structure. Open with a kinetic per-character reveal on the product name (back.out(2.2), 45ms stagger). Mid-video: a glassy product card with one stat counting up via the counter-up snippet to <b>[number]</b>. Close on the Marinade wordmark with the caption <b>"Live now."</b> Use the default blur crossfade between scenes. Light theme. No exclamations, no em-dashes.</div>
+        </div>
+      </div>
+
+      <div class="music-step">
+        <div class="step-number">2</div>
+        <div class="music-step-body">
+          <h4>Stat hero (single number, big swing)</h4>
+          <p>One number does the work. Hold the money frame for at least 0.8s with internal drift. Use this when the number is the story.</p>
+          <div class="music-prompt">Build an 18-second Marinade video where the entire piece earns one number: <b>[8.16% APY]</b>. Open with a hint headline ("The math, all of it" or similar &mdash; one line, 140px). Counter-up to the number at 9.0s using the counter-up snippet with tabular-nums and toFixed(2). Hold the money frame for 1.2s with a sine.inOut breathing scale (1 &rarr; 1.02 &rarr; 1). Close on a single supporting line and the wordmark.</div>
+        </div>
+      </div>
+
+      <div class="music-step">
+        <div class="step-number">3</div>
+        <div class="music-step-body">
+          <h4>Multi-asset catalog (token bloom)</h4>
+          <p>Two rows of tokens bloom in with alternating rotation, then drift. Use when the story is "everything Marinade now supports".</p>
+          <div class="music-prompt">Build a 22-second Marinade video showing rewards across <b>[USDC, SOL, mSOL, MNDE, BTC, ETH]</b>. Hook with a one-line problem ("Earn one. Spend in another."). At 9.6s, bloom tokens row-by-row using the token-bloom snippet &mdash; row 0 rotates -25&deg;, row 1 rotates +25&deg;. After bloom completes at 11.4s, apply the settle drift snippet (y: -6, yoyo, random stagger). Close on the wordmark with "Coming soon."</div>
+        </div>
+      </div>
+
+      <div class="music-step">
+        <div class="step-number">4</div>
+        <div class="music-step-body">
+          <h4>Cursor walkthrough (UI demo)</h4>
+          <p>The cursor arcs across a product surface, lands on a button, ripple expands. Use for app demos and feature reveals.</p>
+          <div class="music-prompt">Build a 20-second Marinade video demoing <b>[the deposit flow]</b> in the Marinade app. Render the UI as a glassy card at 60% scale. At 6s, animate the cursor along a soft arc using MotionPath (power2.inOut, 1.2s). Land on the <b>[Deposit]</b> button at 7.2s. Use the cursor-click-ripple snippet for the click + pill expansion. Reveal the success state. Close on the wordmark with "Live now."</div>
+        </div>
+      </div>
+
+      <div class="music-step">
+        <div class="step-number">5</div>
+        <div class="music-step-body">
+          <h4>Editorial dark scene (single contrast moment)</h4>
+          <p>One dark scene inside an otherwise light video. PP Editorial italic on one accent word. Use sparingly &mdash; one per piece, max.</p>
+          <div class="music-prompt">Build a 22-second Marinade video. Scenes 1, 2, and 4 use the light theme. Scene 3 (8s&ndash;14s) flips to the dark editorial theme (--dark-bg: #0B1816, --dark-fg: white, --dark-accent: #94C9C8). Place one PP Editorial New italic accent word inside scene 3 &mdash; the word is <b>[chosen]</b>. Use the blur-crossfade snippet on both transitions in and out. Return to light for the CTA scene with the wordmark.</div>
         </div>
       </div>
     </div>
